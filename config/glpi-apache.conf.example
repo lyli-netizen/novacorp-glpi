@@ -1,0 +1,12 @@
+# /etc/apache2/sites-available/glpi.conf (exemple)
+<VirtualHost *:80>
+    ServerName glpi.novacorp.local
+    DocumentRoot /var/www/glpi/public
+
+    <Directory /var/www/glpi/public>
+        Require all granted
+        RewriteEngine On
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^(.*)$ index.php [QSA,L]
+    </Directory>
+</VirtualHost>

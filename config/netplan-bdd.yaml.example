@@ -1,0 +1,7 @@
+# /etc/netplan/50-cloud-init.yaml : VM BDD (exemple, adresses à adapter)
+network:
+  version: 2
+  ethernets:
+    ens33:            # VMnet1 Host-Only uniquement : aucun accès Internet
+      dhcp4: false
+      addresses: [192.168.100.20/24]

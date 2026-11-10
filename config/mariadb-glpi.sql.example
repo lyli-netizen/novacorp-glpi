@@ -1,0 +1,5 @@
+-- Création de la base GLPI (exemple : remplacer l'IP et le mot de passe, ne jamais publier le vrai)
+CREATE DATABASE glpi CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'glpi_user'@'192.168.100.10' IDENTIFIED BY 'CHANGER_MOI';
+GRANT ALL PRIVILEGES ON glpi.* TO 'glpi_user'@'192.168.100.10';
+FLUSH PRIVILEGES;
